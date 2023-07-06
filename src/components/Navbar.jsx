@@ -12,7 +12,9 @@ export const Navbar = () => {
         <header>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
-                    <NavLink className="navbar-brand" to={"/"}>Navbar</NavLink>
+                    <NavLink className="navbar-brand" to={"/"}>
+                        <img className="logo" src="https://cdn-icons-png.flaticon.com/256/8/8210.png" alt="" />
+                    </NavLink>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>
