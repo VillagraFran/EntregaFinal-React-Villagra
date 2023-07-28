@@ -1,20 +1,20 @@
-import { useProducts } from "../hooks/useProducts"
+import { useProduct } from "../hooks/useProduct"
 import { ItemList } from "./itemList"
 
 export const ItemListContainer = () => {
-    const { prod } = useProducts()
+    const { products } = useProduct()
 
     return(
         <section className="product-container">
-            {prod.length === 0 ? (
+            {products.length === 0 ? (
                 <div className="loader-container">
-                    <div class="spinner-border text-light" role="status">
-                        <span class="visually-hidden">Loading...</span>
+                    <div className="spinner-border text-light" role="status">
+                        <span className="visually-hidden">Loading...</span>
                     </div>
                 </div>
             )
             : (
-                <ItemList products={ prod } />
+                <ItemList products={ products } />
             )
             }
         </section>

@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 header {
     position: sticky;
     top: 0;
@@ -15,9 +20,63 @@ header {
     width: 40px;
 }
 
+.cart-container{
+    min-height: 70vh;
+    width: 80vw;
+    margin: 50px 0px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.cart {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: show-cart;
+    animation-duration: 1s;
+}
+
+.cart-tools {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    padding: 10px;
+}
+
+.none {
+    display: none;
+}
+
+.card-cart{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 30px 20px 30px;
+    padding-top: 10px;
+    border-top: 1px solid black;
+}
+
+.cart-text h5::first-letter{
+    text-transform: uppercase;
+}
+
+.cart-img{
+    width: 10%;
+    height: 10%;
+}
+
+.BuyForm{
+    margin: 20px;
+}
+
 .nav-item {
     animation-name: show-item;
     animation-duration: 2s;
+}
+
+.nav-link::first-letter{
+    text-transform: uppercase;
 }
 
 main {
@@ -26,7 +85,7 @@ main {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url("https://es.digitaltrends.com/wp-content/uploads/2023/04/mejores-fondos-de-pantalla.jpeg?p=1");
+    background-image: url("https://img.freepik.com/fotos-premium/pared-azulejos-modernos-representacion-3d_118019-4.jpg?w=2000");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -41,14 +100,21 @@ main {
 }
 
 .detail{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: space-evenly;
     align-items: center;
     height: 100vh;
+    border-radius: 5px;
+    box-shadow: 0px 0px 100px 20px black;
 }
 
 .text-detail{
     margin: 50px;
+}
+
+.text-detail ul{
+    padding: 0;
 }
 
 .list-group-item{
@@ -57,11 +123,12 @@ main {
 }
 
 .title {
-    font-size: x-large
+    font-size: x-large;
+    text-transform: uppercase;
 }
 
 .detail-img {
-    height: 30vw;
+    height: 70vh;
     margin: 50px;
     border-radius: 10px;
 }
@@ -81,8 +148,12 @@ main {
 }
 
 .card img {
-    height: 150px;
+    height: 12rem;
     width: auto;
+}
+
+.card-title::first-letter{
+    text-transform: uppercase;
 }
 
 .product-container{
@@ -114,4 +185,16 @@ main {
               transform: translateX(0);
     }
 }
+
+ @keyframes show-cart {
+    0% {
+      transform: scaleY(0.4);
+      transform-origin: 100% 0%;
+    }
+    100% {
+      transform: scaleY(1);
+      transform-origin: 100% 0%;
+    }
+  }
+  
   
